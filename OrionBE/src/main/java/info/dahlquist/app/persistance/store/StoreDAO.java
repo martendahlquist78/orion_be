@@ -19,4 +19,11 @@ public class StoreDAO extends DAOImpl<Store> implements IStoreDAO{
 		return query.getResultList();
 	}
 
+	@Override
+	public Collection<Store> getAllStoresForUser(Long userId) {
+		TypedQuery<Store> query = entityManager.createQuery("select st from store st where st.owner = ?1", Store.class);
+		query.setParameter(1,userId);
+		return query.getResultList();
+	}
+
 }
