@@ -3,6 +3,7 @@ package info.dahlquist.app.controller;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ public class ShoppingListController {
 	//TODO Error handling if list does not exists and so on
 	
 	@Autowired
+	@Qualifier(value="serviceShoppingList")
 	ServiceShoppingList serviceShoppingList;
 	
 	
