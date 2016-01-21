@@ -1,0 +1,14 @@
+info\dahlquist\app\service\ServiceShoppingList.class
+info\dahlquist\app\domain\Store.class
+info\dahlquist\app\persistance\store\IStoreDAO.class
+info\dahlquist\app\persistance\base\IDataDAO.class
+info\dahlquist\app\persistance\shoppinglist\IShoppingListDAO.class
+info\dahlquist\app\App.class
+info\dahlquist\app\controller\StoreController.class
+info\dahlquist\app\persistance\shoppinglist\ShoppingListDAO.class
+info\dahlquist\app\persistance\base\DAOImpl.class
+info\dahlquist\app\controller\ShoppingListController.class
+info\dahlquist\app\domain\ShoppingList.class
+info\dahlquist\app\service\IServiceActions.class
+info\dahlquist\app\service\ServiceStore.class
+info\dahlquist\app\persistance\store\StoreDAO.class

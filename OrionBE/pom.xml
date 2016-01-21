@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   
   	<properties>
-		<spring.version>3.0.5.RELEASE</spring.version>
+		<spring.version>4.2.4.RELEASE</spring.version>
 		<jdk.version>1.8</jdk.version>
 	</properties>
    <developers>
@@ -34,11 +34,6 @@
    <groupId>org.springframework</groupId>
    <artifactId>spring-orm</artifactId>
    <version>${spring.version}</version> 
-  </dependency>
-  <dependency>
-   <groupId>org.springframework</groupId>
-   <artifactId>spring-jdbc</artifactId>
-   <version>${spring.version}</version>
   </dependency>
   <dependency>
    <groupId>org.springframework</groupId>
@@ -91,7 +86,7 @@
                 <version>2.1</version>
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
-                    <server>my-tomcat</server>
+                    <server>the-tomcat</server>
                     <path>/orion</path>
                 </configuration>
             </plugin>

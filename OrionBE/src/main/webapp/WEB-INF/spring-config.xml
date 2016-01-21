@@ -24,7 +24,8 @@
   <property name="dataSource" ref="dataSource" />
   <property name="annotatedClasses">  
             <list>  
-                <value>info.dahlquist.app.domain.ShoppingList</value>  
+                <value>info.dahlquist.app.domain.ShoppingList</value>
+                <value>info.dahlquist.app.domain.Store</value>    
             </list>  
         </property> 
   <property name="hibernateProperties">
