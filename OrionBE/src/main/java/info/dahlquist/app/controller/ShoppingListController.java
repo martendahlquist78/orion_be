@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import info.dahlquist.app.domain.ShoppingList;
 import info.dahlquist.app.service.ServiceShoppingList;
+
 
 @RestController
 @RequestMapping("/shoppinglist")
@@ -31,6 +33,7 @@ public class ShoppingListController {
 		return serviceShoppingList.getAll(userId);
 	}
 	
+	@ExceptionHandler(Exception.class)
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces ="application/json")
 	public @ResponseBody ShoppingList getShoppingListByIdForUser(@PathVariable Long listId){
 		return serviceShoppingList.findDataObject(listId);
@@ -44,5 +47,7 @@ public class ShoppingListController {
 	@RequestMapping(value = "/", method = RequestMethod.PUT, produces ="application/json")
 	public @ResponseBody ShoppingList updateShoppingList(@RequestBody ShoppingList shoppingList){
 		return serviceShoppingList.updateDataObject(shoppingList);
-	}	
+	}
+	
+	//TODO throw new InvalidDataException("could not create...");
 }
